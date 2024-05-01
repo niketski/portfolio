@@ -8,6 +8,11 @@ export default {
     fontFamily: {
       primary: ['Poppins', 'sans-serif']
     },
+    colors: {
+      primary: '#C429D9',
+      secondary: '#04B2D9',
+      
+    },
     extend: {},
   },
   plugins: [],
