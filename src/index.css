@@ -5,3 +5,24 @@
 :root {
  
 }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+    /* font-size: 48px; */
+    line-height: auto;
+    @apply text-[30px] xl:text-[48px];
+}
+
+p {
+    font-weight: 400;
+    @apply text-[16px] xl:text-[18px];
+}
