@@ -19,5 +19,5 @@ export default function Banner({ children, classes }) {
 
 Banner.propTypes = {
     classes: PropTypes.string,
-    children: PropTypes.string
+    children: PropTypes.array
 };
