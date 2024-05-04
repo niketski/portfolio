@@ -16,10 +16,10 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
-h1 {
+h2, h1 {
     /* font-size: 48px; */
     line-height: auto;
-    @apply text-[30px] xl:text-[48px];
+    @apply text-[30px] xl:text-[48px] font-bold;
 }
 
 p {

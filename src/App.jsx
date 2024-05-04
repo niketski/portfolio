@@ -49,21 +49,25 @@ function App() {
             <Button className="ml-5" href="/">Lets talk!</Button>
           </div>                 
         </Banner>
-        <section>
-          {featuredProjects &&
-            featuredProjects.map((project, index) => {
-              return (
-                <FeaturedProject 
-                  key={project.id}
-                  isEven={index % 2 !== 0} 
-                  title={project.title}
-                  imageUrl={project.imageUrl}
-                  technologies={project.technologies}
-                  description={project.description}
-                  demoLink={project.demoLink}/>
-              );
-            })
-          }
+        <section className="py-[50px]">
+          <div className="container">
+            <h2 className="text-[#fff] mb-[40px]">My <span className="text-primary">Projects</span></h2>
+          </div>
+            {featuredProjects &&
+              featuredProjects.map((project, index) => {
+                return (
+                  <FeaturedProject 
+                    key={project.id}
+                    isEven={index % 2 !== 0} 
+                    title={project.title}
+                    imageUrl={project.imageUrl}
+                    technologies={project.technologies}
+                    description={project.description}
+                    demoLink={project.demoLink}/>
+                );
+              })
+            }
+          
         </section>
       </main>
     </>
