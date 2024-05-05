@@ -3,6 +3,7 @@ import Banner from './components/banner'
 import FeaturedProject from './components/featured-project'
 import Button from './components/ui/button'
 import imagePlaceholder from './assets/images/image-placeholder.jpg';
+import SkillsSection from './components/container/skills-section';
 
 function App() {
   const featuredProjects = [
@@ -51,7 +52,7 @@ function App() {
         </Banner>
         <section className="py-[50px]">
           <div className="container">
-            <h2 className="text-[#fff] mb-[40px]">My <span className="text-primary">Projects</span></h2>
+            <h2 className="text-[#fff] mb-[40px] text-center lg:text-left">My <span className="text-primary">Projects</span></h2>
           </div>
             {featuredProjects &&
               featuredProjects.map((project, index) => {
@@ -69,6 +70,7 @@ function App() {
             }
           
         </section>
+        <SkillsSection/>
       </main>
     </>
   )

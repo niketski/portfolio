@@ -13,21 +13,6 @@
     }
 
 .btn {
-    display: inline-block;
-    font-weight: 700;
-    color: #fff;
-    background: linear-gradient(to right, #04B2D9 14%, #681673 82%);
-    border-radius: 10px;
-    box-shadow: 0px 2px 11px rgba(255, 255, 255, 0);
-    transition: box-shadow .3s ease-out;
-    @apply text-[13px] xl:text-[16px] px-[20px] xl:px-[38px] py-[12.5px] xl:py-[10px];
-}
-
-.btn:hover {
-    box-shadow: 0px 2px 11px rgba(255, 255, 255, .30);
-}
-
-.btn:not(.secondary) {
-    transition: all .3s ease;
+    @apply inline-block font-bold rounded-[10px] text-[13px] xl:text-[16px] px-[20px] xl:px-[38px] py-[12.5px] xl:py-[10px] ;
 }
 
