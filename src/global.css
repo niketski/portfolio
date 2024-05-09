@@ -8,11 +8,20 @@
     -webkit-text-stroke-width: 1px;
 }
 
-    .accent-font span {
-        -webkit-text-fill-color: #fff;
-    }
+.accent-font span {
+    -webkit-text-fill-color: #fff;
+}
 
 .btn {
     @apply inline-block font-bold rounded-[10px] text-[13px] xl:text-[16px] px-[20px] xl:px-[38px] py-[12.5px] xl:py-[10px] ;
 }
 
+.site-bg-gradient {
+    @apply bg-gradient-to-r from-secondary from-[14%] to-[#681673] to-[82%];
+}
+
+.gradient-bordered-text {
+    -webkit-text-stroke: 2px transparent;
+    -webkit-text-fill-color: #0D0D0D;
+    @apply font-bold leading-none text-[#0d0d0d] text-[48px] inline-block bg-clip-text;
+}

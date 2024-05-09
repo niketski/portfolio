@@ -70,7 +70,3 @@ export default function SkillsSection() {
         </section>
     );
 }
-
-// SkillsSection.propTypes = {
-
-// };
