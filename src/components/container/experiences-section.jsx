@@ -44,9 +44,11 @@ export default function ExperiencesSection() {
                 (context) => {
                     
                     const { isDesktop } = context.conditions;
-                    
+
+                    console.log(isDesktop);
+
                     gsap.to(slider.current, {
-                        xPercent: (isDesktop ? -50 : -70),
+                        xPercent: (isDesktop ? -60 : -70),
                         ease: 'none',
                         scrollTrigger: {
                             trigger: section.current,
@@ -63,7 +65,7 @@ export default function ExperiencesSection() {
     
 
     return (
-        <section className="py-[50px]" ref={section}>
+        <section className="py-[70px]" ref={section}>
             <div className="container">
                 <h2 className="text-center text-[#fff] mb-[80px] lg:mb-[30px] xl:mb-[100px]">Professional <br/><span className="text-primary">Experience</span></h2>
             </div>

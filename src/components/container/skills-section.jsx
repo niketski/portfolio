@@ -39,7 +39,7 @@ export default function SkillsSection() {
     };
 
     return (
-        <section className="py-[50px]">
+        <section className="py-[70px]">
             <div className="container">
                 <h2 className="text-center text-[#fff] mb-[28px]">Skills</h2>
                 <div className="flex justify-center mb-[112px]">

@@ -21,7 +21,7 @@ function App() {
           </div>                 
         </Banner>
 
-        <section className="py-[50px]">
+        <section className="py-[70px]">
           <div className="container">
             <h2 className="text-[#fff] mb-[40px] text-center lg:text-left">My <span className="text-primary">Projects</span></h2>
           </div>
