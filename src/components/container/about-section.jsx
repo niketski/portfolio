@@ -1,5 +1,6 @@
 import aboutProfileImage from '../../assets/images/about-featured-img.png'
 import aboutImgAccent from '../../assets/images/about-bg-accent.png'
+import ProfileImageAccent from '../profile-image-accent';
 
 export default function AboutSection() {
     return (
@@ -8,10 +9,9 @@ export default function AboutSection() {
                 <div className="lg:flex">
                     <div className="lg:w-[46.66%] mb-[50px] lg:mb-[0]">
                         <div className="relative min-[1480px]:ml-[-157px] min-[1201px]:ml-[-60px] max-w-[450px] lg:max-w-[unset] mx-auto">
-                            <div className="md:pl-[154px] md:pt-[95px] relative pl-[100px] pt-[30px]">
-                                <img src={aboutImgAccent} alt="" className="absolute top-0 left-0 w-full h-full object-cover object-left-top"/>
-                                <img src={aboutProfileImage} alt="Nicole Benedict Lim" width="526" height="902" className="relative z-10"/>
-                            </div>
+                            <ProfileImageAccent
+                                imageUrl={aboutProfileImage}
+                                altText='Nicole Benedict G. Lim'/>
                         </div>
                     </div>s
                     <div className="lg:w-[53.34%] lg:pl-[50px] lg:pt-[120px]">
