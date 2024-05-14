@@ -62,8 +62,6 @@ export default function ExperiencesSection() {
         }, []);
     
 
-        console.log(sliderWidth);
-
     return (
         <section className="py-[50px]" ref={section}>
             <div className="container">

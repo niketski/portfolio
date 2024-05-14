@@ -5,6 +5,7 @@ import Button from './components/ui/button'
 import SkillsSection from './components/container/skills-section';
 import ExperiencesSection from './components/container/experiences-section';
 import { featuredProjectsData } from './data/featured-projects-data';
+import AboutSection from './components/container/about-section';
 
 function App() {
 
@@ -13,7 +14,7 @@ function App() {
       <main className="bg-dark">
 
         <Banner>
-          <h1 className="text-[#fff] text-center font-bold accent-font">Hey there! I&apos;m <span>Nico</span>, a passionate Web Developer that loves to convert web designs into an interactive and responsive website.</h1>
+          <h1 className="text-[#fff] text-center font-bold accent-font leading-[45px] xl:leading-[70px]">Hey there! I&apos;m <span>Nico</span>, a passionate Web Developer that loves to convert web designs into an interactive and responsive website.</h1>
           <div className="text-center items-center justify-center mt-5 block lg:flex">
             <p className="text-[#fff] mb-5 lg:mb-0">Need a help to make your ideal website turn into reality?</p>
             <Button className="ml-5" href="/">Lets talk!</Button>
@@ -45,7 +46,7 @@ function App() {
 
         <ExperiencesSection/>
 
-        <SkillsSection/>
+        <AboutSection/>
 
       </main>
     </>
