@@ -51,14 +51,15 @@ export default function SkillsSection() {
                     {tabs && 
                         tabs.map(tab => {
                             return (
-                                <div className={`${!tab.isActive ? 'hidden' : 'grid'} gap-5 md:grid-cols-2 lg:grid-cols-4`} key={tab.id}>
+                                <div className={`${!tab.isActive ? 'hidden' : 'grid'} gap-5 grid-cols-2 lg:grid-cols-4 lg:min-h-[820px]`} key={tab.id}>
                                     {tab.data &&
                                         tab.data.map(item => {
                                             return (
                                                 <LogoCard 
                                                     key={item.label} 
                                                     imageUrl={item.imageUrl} 
-                                                    label={item.label}/>
+                                                    label={item.label}
+                                                    className="mx-auto w-full"/>
                                             );
                                         })
                                     }

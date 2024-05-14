@@ -25,3 +25,27 @@
     -webkit-text-fill-color: #0D0D0D;
     @apply font-bold leading-none text-[#0d0d0d] text-[48px] inline-block bg-clip-text;
 }
+
+.slide-overlay-left::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 300px;
+    background: linear-gradient(to right, #0D0D0D, transparent 50%);
+    z-index: 2;
+}
+
+.slide-overlay-right::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 300px;
+    background: linear-gradient(to left, #0D0D0D, transparent 50%);
+    z-index: 2;
+}

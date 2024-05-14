@@ -16,19 +16,22 @@ export default function ExperienceInfo({ experience }) {
 
     return (
         <div>
-            <div className="min-h-[145px]">
-                <h3 className="site-bg-gradient gradient-bordered-text">{dateStart.year}</h3>         
+            <div className=" lg:min-h-[90px]  xl:min-h-[145px] mb-[20px] lg:mb-[0] text-center lg:text-left">
+                <h3 className="inline-block bg-dark">
+                    <span className="site-bg-gradient gradient-bordered-text">{dateStart.year}</span>
+                </h3>         
             </div>
-            <div className="pl-[70px] relative">
+            <div className="lg:pl-[70px] relative">
                 <div className="mb-[20px]">
-                    <em className="absolute w-[25px] h-[25px] bg-primary rounded-[50%] left-0 top-0"></em>
-                    <span className="font-bold text-[13px] text-[#4D4D4D] uppercase">{`${startDate} -`} {endDate}</span>
+                    <em className="absolute w-[25px] h-[25px] bg-primary rounded-[50%] left-0 top-0 hidden lg:block"></em>
+                    <span className="font-bold text-[13px] text-[#4D4D4D] uppercase text-center lg:text-left block">{`${startDate} -`} {endDate}</span>
                 </div>
 
                 <DetailsCard
                     subtitle={company}
                     title={role}
-                    content={description}/>
+                    content={description}
+                    className="mx-auto lg:m-0"/>
             </div>
         </div>
     );
