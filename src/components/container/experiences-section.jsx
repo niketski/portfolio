@@ -23,11 +23,10 @@ export default function ExperiencesSection() {
         for (let slide of slides) {
                 
             totalWidth += slide.offsetWidth;
-            console.log(slide.offsetWidth);
             
         }
 
-        return totalWidth + sliderLeftRightPadding;
+        return totalWidth + sliderLeftRightPadding;                                                                                                                                             
     };
     
         useGSAP(() => {
