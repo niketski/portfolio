@@ -2,6 +2,7 @@ import { useState } from "react";
 import Button from "../ui/button";
 import Input from "../ui/input";
 import Textarea from "../ui/textarea";
+import { debounce } from "../../utils";
 
 export default function GetInTouchForm() {
     const [formData, setFormData] = useState({
@@ -18,12 +19,8 @@ export default function GetInTouchForm() {
             value: ''
         }
     });
-    // const [name, setName] = useState('');
-    // const [email, setEmail] = useState('');
-    // const [phoneNumber, setPhoneNumber] = useState('');
-    // const [message, setMessage] = useState('');
 
-    const handleChange = event => {
+    const handleChange = debounce(event => {
         const value = event.target.value;
         const name = event.target.name;
 
@@ -35,7 +32,8 @@ export default function GetInTouchForm() {
                 }
             }
         });
-    };
+        
+    }, 1000);
 
     console.log(formData);
 
