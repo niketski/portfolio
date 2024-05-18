@@ -1,7 +1,44 @@
+import { useState } from "react";
 import Button from "../ui/button";
-import Input from "../input";
+import Input from "../ui/input";
+import Textarea from "../ui/textarea";
 
 export default function GetInTouchForm() {
+    const [formData, setFormData] = useState({
+        name: {
+            value: ''
+        },
+        email: {
+            value: ''
+        },
+        phoneNumber: {
+            value: ''
+        },
+        message: {
+            value: ''
+        }
+    });
+    // const [name, setName] = useState('');
+    // const [email, setEmail] = useState('');
+    // const [phoneNumber, setPhoneNumber] = useState('');
+    // const [message, setMessage] = useState('');
+
+    const handleChange = event => {
+        const value = event.target.value;
+        const name = event.target.name;
+
+        setFormData(prevState => {
+            return {
+                ...prevState,
+                [name]: {
+                    value
+                }
+            }
+        });
+    };
+
+    console.log(formData);
+
     return (
         <form>
 
@@ -11,7 +48,9 @@ export default function GetInTouchForm() {
                     type="text"
                     name="name"
                     id="name"
-                    placeholder="Name"/>
+                    placeholder="Name"
+                    value={formData.name.value}
+                    onChange={handleChange}/>
             </div>
 
             <div className="lg:flex lg:mx-[-15px] mb-[15px] lg:mb-[30px]"> 
@@ -22,7 +61,9 @@ export default function GetInTouchForm() {
                         type="email"
                         name="email"
                         id="email"
-                        placeholder="Email"/>
+                        placeholder="Email"
+                        value={formData.email.value}
+                        onChange={handleChange}/>
                 </div>
 
                 <div className="relative lg:w-1/2 lg:px-[15px]">
@@ -30,19 +71,22 @@ export default function GetInTouchForm() {
                     <Input
                         label="Phone Number"
                         type="tel"
-                        name="phone-number"
-                        id="phone-number"
-                        placeholder="Phone Number"/>
+                        name="phoneNumber"
+                        id="phoneNumber"
+                        placeholder="Phone Number"
+                        value={formData.phoneNumber.value}
+                        onChange={handleChange}/>
                 </div>
             </div>
 
             <div className="relative mb-[15px] lg:mb-[30px]">
-                <label htmlFor="message" className="hidden">Message</label>
-                <textarea 
+                <Textarea
+                    label="Message"
                     name="message" 
                     id="message"
                     placeholder="Message"
-                    className="block w-full h-[221px] text-[15px] lg:text-[18px] text-[#fff] font-normal bg-[#03132A] px-[25px] border-none rounded-[10px] resize-none pt-[28px] outline-none focus:outline-2 focus:outline-primary"></textarea>
+                    value={formData.message.value}
+                    onChange={handleChange}/>
             </div>
 
             <div className=" text-right">
