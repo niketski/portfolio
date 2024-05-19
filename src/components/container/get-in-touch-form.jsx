@@ -2,7 +2,7 @@ import { useState } from "react";
 import Button from "../ui/button";
 import Input from "../ui/input";
 import Textarea from "../ui/textarea";
-import { debounce, isValidEmail, isValidPhone } from "../../utils";
+import {  isValidEmail, isValidPhone } from "../../utils";
 
 export default function GetInTouchForm() {
     const [formData, setFormData] = useState({
@@ -16,7 +16,7 @@ export default function GetInTouchForm() {
             value: '',
             error: '',
             label: 'Email',
-            required: false
+            required: true
         },
         phoneNumber: {
             value: '',
@@ -66,7 +66,7 @@ export default function GetInTouchForm() {
         return error;
     };
 
-    const handleChange = debounce(event => {
+    const handleChange = event => {
         const inputField = event.target;
         const value = event.target.value;
         const name = event.target.name;
@@ -79,13 +79,29 @@ export default function GetInTouchForm() {
                 ...prevState,
                 [name]: {
                     ...prevState[name],
-                    value,
+                    value: value,
                     error,
                 }
             }
         });
         
-    }, 1000);
+    };
+
+    const clearFormData = () => {
+        
+        setFormData(prevState => {
+            const currentFormData = {...prevState};
+
+            for(let key in currentFormData) {
+
+                currentFormData[key].value = '';
+                currentFormData[key].error = '';
+            }
+
+            return currentFormData;
+        });
+
+    };
 
     const handleSubmit = event => {
         event.preventDefault();
@@ -98,18 +114,33 @@ export default function GetInTouchForm() {
            if(currentFormData[key].value === '' && currentFormData[key].required) {
 
                 currentFormData[key].error = `${currentFormData[key].label} is required.`;
+                
                 hasError = true;
-           }
+
+            } else if(currentFormData[key].error != '') {
+
+                hasError = true;
+
+            }
 
         }
 
         if(hasError) {
+
             setFormData(currentFormData);
-        }
+
+            return;
+        
+        } 
+
+        setTimeout(() => {
+
+            clearFormData();
+
+        }, 3000);
 
     };
 
-    console.log(formData);
     return (
         <form onSubmit={handleSubmit}>
 
