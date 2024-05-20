@@ -3,6 +3,12 @@ import Button from "../ui/button";
 import Input from "../ui/input";
 import Textarea from "../ui/textarea";
 import {  isValidEmail, isValidPhone } from "../../utils";
+import emailjs from '@emailjs/browser';
+import Spinner from "../ui/spinner";
+
+const SERVICE_ID = 'service_8bbj47q';
+const TEMPLATE_ID = 'template_qtgpndw';
+const PUBLIC_KEY = 'N0ytmOxlm6U5lRUTy';
 
 export default function GetInTouchForm() {
     const [formData, setFormData] = useState({
@@ -31,6 +37,14 @@ export default function GetInTouchForm() {
             required: true
         }
     });
+    const [isLoading, setIsLoading] = useState(false);
+    const emailParams = {
+        to_name: 'Nicole Benedict G. Lim',
+        from_name: formData.name.value,
+        from_message: formData.message.value,
+        from_phone_number: formData.phoneNumber.value,
+        from_email: formData.email.value
+    };
 
     const validateInput = (inputField) => {
         let error = '';
@@ -103,9 +117,11 @@ export default function GetInTouchForm() {
 
     };
 
-    const handleSubmit = event => {
+    const handleSubmit = async event => {
         event.preventDefault();
         
+        setIsLoading(true);
+
         const currentFormData = {...formData};
         let hasError = false;
 
@@ -129,11 +145,34 @@ export default function GetInTouchForm() {
 
             setFormData(currentFormData);
 
+            setIsLoading(false);
             return;
         
         } 
 
+        try {
+
+            const response = await emailjs.send(SERVICE_ID, TEMPLATE_ID, emailParams, PUBLIC_KEY);
+
+            if(response.status != 200) {
+
+                setIsLoading(false);
+                throw new Error(`Error occured: ${response.text}`);
+                
+            }
+
+
+        } catch(error) {
+
+            console.log(error);
+
+            setIsLoading(false);
+
+        }
+
         setTimeout(() => {
+
+            setIsLoading(false);
 
             clearFormData();
 
@@ -196,7 +235,7 @@ export default function GetInTouchForm() {
             </div>
 
             <div className=" text-right">
-                <Button type='submit'>Submit</Button>
+                {isLoading ? <Spinner/> : <Button type='submit'>Submit</Button>}
             </div>
             
         </form>
