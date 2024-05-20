@@ -5,6 +5,7 @@ import Textarea from "../ui/textarea";
 import {  isValidEmail, isValidPhone } from "../../utils";
 import emailjs from '@emailjs/browser';
 import Spinner from "../ui/spinner";
+import MessageBox from "../ui/message-box";
 
 const SERVICE_ID = 'service_8bbj47q';
 const TEMPLATE_ID = 'template_qtgpndw';
@@ -157,6 +158,7 @@ export default function GetInTouchForm() {
             if(response.status != 200) {
 
                 setIsLoading(false);
+
                 throw new Error(`Error occured: ${response.text}`);
                 
             }
@@ -237,6 +239,10 @@ export default function GetInTouchForm() {
             <div className=" text-right">
                 {isLoading ? <Spinner/> : <Button type='submit'>Submit</Button>}
             </div>
+
+            <MessageBox color="success">
+                <p>Your message has been sent successfully!</p>
+            </MessageBox>
             
         </form>
     );
