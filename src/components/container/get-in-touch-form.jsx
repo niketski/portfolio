@@ -12,6 +12,7 @@ const TEMPLATE_ID = 'template_qtgpndw';
 const PUBLIC_KEY = 'N0ytmOxlm6U5lRUTy';
 
 export default function GetInTouchForm() {
+    const [isMessageActive, setIsMessageActive] = useState(false);
     const [formData, setFormData] = useState({
         name: {
             value: '',
@@ -163,6 +164,15 @@ export default function GetInTouchForm() {
                 
             }
 
+            setIsLoading(false);
+            setIsMessageActive(true);
+
+            setTimeout(() => {
+
+                setIsMessageActive(false);
+
+            }, 3000);
+
 
         } catch(error) {
 
@@ -173,8 +183,6 @@ export default function GetInTouchForm() {
         }
 
         setTimeout(() => {
-
-            setIsLoading(false);
 
             clearFormData();
 
@@ -240,9 +248,7 @@ export default function GetInTouchForm() {
                 {isLoading ? <Spinner/> : <Button type='submit'>Submit</Button>}
             </div>
 
-            <MessageBox color="success">
-                <p>Your message has been sent successfully!</p>
-            </MessageBox>
+            {isMessageActive && <MessageBox className="mt-[20px]" color="#1dd1a1"><p>Your message has been sent successfully!</p></MessageBox>}
             
         </form>
     );

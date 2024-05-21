@@ -1,8 +1,14 @@
 import PropTypes from 'prop-types';
 
-export default function MessageBox({ children, color }) {
+export default function MessageBox({ children, color = '#000', className }) {
+
+    const colorStyle = {
+        borderColor: color,
+        color: color
+    };
+
     return (
-        <div className={`border-2 border-${color} text-${color} rounded-[10px] px-[15px] py-[10px] text-center`}>
+        <div style={colorStyle} className={`${className} border-2 rounded-[10px] px-[15px] py-[10px] text-center`}>
             {children}
         </div>
     );
@@ -10,5 +16,6 @@ export default function MessageBox({ children, color }) {
 
 MessageBox.propTypes = {
     children: PropTypes.object,
-    color: PropTypes.string
+    color: PropTypes.string,
+    className: PropTypes.string
 };
