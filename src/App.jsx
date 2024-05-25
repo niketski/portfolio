@@ -6,6 +6,7 @@ import SkillsSection from './components/container/skills-section';
 import ExperiencesSection from './components/container/experiences-section';
 import { featuredProjectsData } from './data/featured-projects-data';
 import AboutSection from './components/container/about-section';
+import Footer from './components/container/footer';
 
 function App() {
 
@@ -49,6 +50,8 @@ function App() {
         <AboutSection/>
 
       </main>
+
+      <Footer/>
     </>
   )
 }
