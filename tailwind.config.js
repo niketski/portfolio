@@ -14,7 +14,11 @@ export default {
       dark: '#0D0D0D',
       success: '#1dd1a1'
     },
-    extend: {},
+    extend: {
+      screens: {
+        'max-h-800': { 'raw': '(max-height: 800px)' },
+      }
+    },
   },
   plugins: [],
 }

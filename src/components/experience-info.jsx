@@ -17,7 +17,7 @@ export default function ExperienceInfo({ experience }) {
     return (
         <div>
             <div className=" lg:min-h-[90px]  xl:min-h-[145px] mb-[20px] lg:mb-[0] text-center lg:text-left">
-                <h3 className="inline-block bg-dark">
+                <h3 className="inline-block bg-dark px-[45px]">
                     <span className="site-bg-gradient gradient-bordered-text">{dateStart.year}</span>
                 </h3>         
             </div>
