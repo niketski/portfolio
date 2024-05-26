@@ -21,12 +21,12 @@ export default function Button({ className, href = null, children, variant, onCl
     return (
         href ? <Link 
                     to={href} 
-                    className={`${ className ? className : ''} ${buttonStyleClasses} btn`}>
+                    className={`${buttonStyleClasses} btn ${ className ? className : ''}`}>
                     {children}
                 </Link> :
                 <button 
                     type={type} 
-                    className={`${ className ? className : ''} ${buttonStyleClasses} btn`}
+                    className={`${buttonStyleClasses} btn ${ className ? className : ''}`}
                     onClick={ onClick ? onClick : null }>
                     {children}
                 </button>

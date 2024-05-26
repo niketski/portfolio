@@ -7,11 +7,15 @@ import ExperiencesSection from './components/container/experiences-section';
 import { featuredProjectsData } from './data/featured-projects-data';
 import AboutSection from './components/container/about-section';
 import Footer from './components/container/footer';
+import Header from './components/header';
 
 function App() {
 
   return (
     <>
+
+      <Header/>
+      
       <main className="bg-dark">
 
         <Banner>
