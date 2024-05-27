@@ -49,3 +49,16 @@
     background: linear-gradient(to left, #0D0D0D, transparent 50%);
     z-index: 2;
 }
+
+.no-scroll {
+    overflow: hidden;
+}
+
+html {
+    transition: transform .5s ease;
+}
+
+html.active-mobile-menu {
+    transform: translateX(-200px);
+    overflow: hidden !important;
+}

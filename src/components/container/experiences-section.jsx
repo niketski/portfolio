@@ -34,9 +34,10 @@ export default function ExperiencesSection() {
         useGSAP(() => {
 
             let children = sliderInner.current.children;
+            let sliderXPadding = 204 * 2;
             let sliderWidth = computeTotalSlideWidth(children);
 
-            setSliderWidth(sliderWidth);
+            setSliderWidth(sliderWidth + sliderXPadding);
 
             matchMedia.add(
                 {
@@ -81,7 +82,7 @@ export default function ExperiencesSection() {
     
 
     return (
-        <section className="py-[70px]" ref={section}>
+        <section className="py-[70px] pt-[120px]" ref={section}>
             <div className="container">
                 <h2 className="text-center text-[#fff] mb-[80px] lg:mb-[30px] xl:mb-[100px] max-h-800:mb-[30px]">Professional <br/><span className="text-primary">Experience</span></h2>
             </div>
@@ -94,7 +95,7 @@ export default function ExperiencesSection() {
                     
                     {/* <div ref={line} className="absolute top-[23px] left-[204px] h-[3px] bg-[#2C2C2C]" style={{ width: 0 }}></div> */}
 
-                    <div className="relative px-[15px] lg:px-[204px]  w-[100vw] lg:w-[auto]" ref={sliderInner}>
+                    <div className="relative px-[15px] lg:px-[204px]  w-[100vw] lg:w-[auto] lg:flex flex-wrap" ref={sliderInner}>
                         {experienceData &&
 
                             experienceData.map((data, index) => {
