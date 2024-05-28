@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
 
-export default function Banner({ children, classes }) {
+export default function Banner({ children, classes, id }) {
     
     return (
-        <section className={ `${classes ? classes : ''} relative` }>
+        <section id={id ? id : null} className={ `${classes ? classes : ''} relative` }>
             <canvas width="1600" height="700" className="w-full min-h-[600px]"></canvas>
             <div className="absolute top-[50%] translate-y-[-50%] w-full">
                 <div className="container">
@@ -19,5 +19,6 @@ export default function Banner({ children, classes }) {
 
 Banner.propTypes = {
     classes: PropTypes.string,
-    children: PropTypes.array
+    children: PropTypes.array,
+    id: PropTypes.string
 };

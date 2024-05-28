@@ -4,8 +4,22 @@ import IconDownload from './ui/icon-download';
 import BurgerMenuButton from './ui/burger-menu-button';
 import MobileMenu from './mobile-menu';
 import PropTypes from 'prop-types';
+import { useEffect } from 'react';
+import { scrollToSection } from '../utils';
 
 export default function Header({ mobileMenuHandler, isMobileMenuActive }) {
+    
+    const handleMenuScroll = event => {
+
+        event.preventDefault();
+
+        const target = event.target;
+        const id = target.getAttribute('href');
+       
+        scrollToSection(id);
+        
+    };
+
     
     return (
         <>
@@ -18,11 +32,12 @@ export default function Header({ mobileMenuHandler, isMobileMenuActive }) {
                         <div className="flex items-center">
                             <nav className=" hidden lg:inline-block">
                                 <ul className=" list-none">
-                                    <li className="inline-block align-middle text-[#fff] text-[20px] font-bold mr-4"><a href="#" className="relative inline-block after:content-[''] after:block after:absolute after:bottom-0 after:left-0 after:w-0 after:bg-[#fff] after:h-[2px] after:transition-[width] after:hover:w-full">Home</a></li>
-                                    <li className="inline-block align-middle text-[#fff] text-[20px] font-bold mr-4"><a href="#" className="relative inline-block after:content-[''] after:block after:absolute after:bottom-0 after:left-0 after:w-0 after:bg-[#fff] after:h-[2px] after:transition-[width] after:hover:w-full">Projects</a></li>
-                                    <li className="inline-block align-middle text-[#fff] text-[20px] font-bold mr-4"><a href="#" className="relative inline-block after:content-[''] after:block after:absolute after:bottom-0 after:left-0 after:w-0 after:bg-[#fff] after:h-[2px] after:transition-[width] after:hover:w-full">Skills</a></li>
-                                    <li className="inline-block align-middle text-[#fff] text-[20px] font-bold mr-4"><a href="#" className="relative inline-block after:content-[''] after:block after:absolute after:bottom-0 after:left-0 after:w-0 after:bg-[#fff] after:h-[2px] after:transition-[width] after:hover:w-full">Experience</a></li>
-                                    <li className="inline-block align-middle text-[#fff] text-[20px] font-bold"><a href="#" className="relative inline-block after:content-[''] after:block after:absolute after:bottom-0 after:left-0 after:w-0 after:bg-[#fff] after:h-[2px] after:transition-[width] after:hover:w-full">Contact</a></li>
+                                    <li className="inline-block align-middle text-[#fff] text-[20px] font-bold mr-4"><a onClick={e => { handleMenuScroll(e) }} href="#hero-banner" className="relative inline-block after:content-[''] after:block after:absolute after:bottom-0 after:left-0 after:w-0 after:bg-[#fff] after:h-[2px] after:transition-[width] after:hover:w-full">Home</a></li>
+                                    <li className="inline-block align-middle text-[#fff] text-[20px] font-bold mr-4"><a onClick={e => { handleMenuScroll(e) }} href="#featured-propjects" className="relative inline-block after:content-[''] after:block after:absolute after:bottom-0 after:left-0 after:w-0 after:bg-[#fff] after:h-[2px] after:transition-[width] after:hover:w-full">Projects</a></li>
+                                    <li className="inline-block align-middle text-[#fff] text-[20px] font-bold mr-4"><a onClick={e => { handleMenuScroll(e) }} href="#skills" className="relative inline-block after:content-[''] after:block after:absolute after:bottom-0 after:left-0 after:w-0 after:bg-[#fff] after:h-[2px] after:transition-[width] after:hover:w-full">Skills</a></li>
+                                    <li className="inline-block align-middle text-[#fff] text-[20px] font-bold mr-4"><a onClick={e => { handleMenuScroll(e) }} href="#experience" className="relative inline-block after:content-[''] after:block after:absolute after:bottom-0 after:left-0 after:w-0 after:bg-[#fff] after:h-[2px] after:transition-[width] after:hover:w-full">Experience</a></li>
+                                    <li className="inline-block align-middle text-[#fff] text-[20px] font-bold mr-4"><a onClick={e => { handleMenuScroll(e) }} href="#about" className="relative inline-block after:content-[''] after:block after:absolute after:bottom-0 after:left-0 after:w-0 after:bg-[#fff] after:h-[2px] after:transition-[width] after:hover:w-full">About</a></li>
+                                    <li className="inline-block align-middle text-[#fff] text-[20px] font-bold"><a onClick={e => { handleMenuScroll(e) }} href="#contact" className="relative inline-block after:content-[''] after:block after:absolute after:bottom-0 after:left-0 after:w-0 after:bg-[#fff] after:h-[2px] after:transition-[width] after:hover:w-full">Contact</a></li>
                                 </ul>
                             </nav>
                             <div className="hidden lg:inline-block">
