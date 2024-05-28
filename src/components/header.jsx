@@ -4,7 +4,6 @@ import IconDownload from './ui/icon-download';
 import BurgerMenuButton from './ui/burger-menu-button';
 import MobileMenu from './mobile-menu';
 import PropTypes from 'prop-types';
-import { useEffect } from 'react';
 import { scrollToSection } from '../utils';
 
 export default function Header({ mobileMenuHandler, isMobileMenuActive }) {
