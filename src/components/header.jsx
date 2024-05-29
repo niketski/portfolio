@@ -5,6 +5,7 @@ import BurgerMenuButton from './ui/burger-menu-button';
 import MobileMenu from './mobile-menu';
 import PropTypes from 'prop-types';
 import { scrollToSection } from '../utils';
+import myCV from '../assets/pdf/my-cv.pdf';
 
 export default function Header({ mobileMenuHandler, isMobileMenuActive }) {
     
@@ -19,6 +20,7 @@ export default function Header({ mobileMenuHandler, isMobileMenuActive }) {
         
     };
 
+    console.log(myCV);
     
     return (
         <>
@@ -40,7 +42,7 @@ export default function Header({ mobileMenuHandler, isMobileMenuActive }) {
                                 </ul>
                             </nav>
                             <div className="hidden lg:inline-block">
-                                <Button className="!text-[14px] !inline-flex !px-[15px] ml-[30px]">Download my CV <IconDownload className="ml-[10px]"/></Button>
+                                <Button className="!text-[14px] !inline-flex !px-[15px] ml-[30px]" href={myCV} download={myCV}>Download my CV <IconDownload className="ml-[10px]"/></Button>
                             </div>
                             <div className="inline-block lg:hidden">
                                 <BurgerMenuButton onClick={() => { mobileMenuHandler(true) }}/>

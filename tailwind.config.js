@@ -16,7 +16,7 @@ export default {
     },
     extend: {
       screens: {
-        'max-h-800': { 'raw': '(max-height: 800px)' },
+        'max-h-800': { 'raw': '(max-height: 800px) and (min-width: 992px)' },
       }
     },
   },
