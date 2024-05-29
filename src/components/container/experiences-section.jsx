@@ -45,8 +45,6 @@ export default function ExperiencesSection() {
                     isTablet: '(min-width: 1024px)'
                 },
                 (context) => {
-
-                    console.log(section.current)
                     
                     const { isDesktop } = context.conditions;
                     // const lineWidth = sliderWidth - ((204 * 3) + 890);

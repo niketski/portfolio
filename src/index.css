@@ -17,9 +17,8 @@ body {
 }
 
 h2, h1 {
-    /* font-size: 48px; */
     line-height: 1;
-    @apply text-[30px] xl:text-[48px] font-bold;
+    @apply text-[30px] xl:text-[48px] font-bold max-h-800:text-[43px];
 }
 
 p {

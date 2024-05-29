@@ -1,3 +1,4 @@
+
 .container {
     @apply mx-auto px-[15px] xl:w-[1170px];
 }
@@ -52,13 +53,4 @@
 
 .no-scroll {
     overflow: hidden;
-}
-
-html {
-    transition: transform .5s ease;
-}
-
-html.active-mobile-menu {
-    transform: translateX(-200px);
-    overflow: hidden !important;
 }

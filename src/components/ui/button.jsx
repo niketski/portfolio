@@ -36,7 +36,10 @@ export default function Button({ className, href = null, children, variant, onCl
 Button.propTypes = {
     className: PropTypes.string,
     isLink: PropTypes.bool,
-    children: PropTypes.string,
+    children: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.array
+    ]),
     href: PropTypes.string,
     variant: PropTypes.string,
     onClick: PropTypes.func,

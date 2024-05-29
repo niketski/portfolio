@@ -27,6 +27,7 @@ export default function MobileMenu({ onClose, isActive }) {
                             <li className="text-[#fff] text-[20px] font-bold mb-[20px]"><a href="#" className="relative inline-block">Projects</a></li>
                             <li className="text-[#fff] text-[20px] font-bold mb-[20px]"><a href="#" className="relative inline-block">Skills</a></li>
                             <li className="text-[#fff] text-[20px] font-bold mb-[20px]"><a href="#" className="relative inline-block">Experience</a></li>
+                            <li className="text-[#fff] text-[20px] font-bold mb-[20px]"><a href="#" className="relative inline-block">About</a></li>
                             <li className="text-[#fff] text-[20px] font-bold"><a href="#" className="relative inline-block">Contact</a></li>
                         </ul>
                     </nav>
