@@ -8,7 +8,7 @@ import ExperienceInfo from '../experience-info';
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(useGSAP);
 
-export default function ExperiencesSection() {
+export default function ExperiencesSection({ id }) {
     // const line = useRef();
     const slider = useRef();
     const sliderInner = useRef();
@@ -80,7 +80,7 @@ export default function ExperiencesSection() {
     
 
     return (
-        <section className="py-[70px] pt-[120px]" ref={section}>
+        <section className="py-[70px] pt-[120px]" ref={section} id={id ? id : null}>
             <div className="container">
                 <h2 className="text-center text-[#fff] mb-[80px] lg:mb-[30px] xl:mb-[100px] max-h-800:mb-[30px]">Professional <br/><span className="text-primary">Experience</span></h2>
             </div>

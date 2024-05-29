@@ -1,9 +1,9 @@
 import aboutProfileImage from '../../assets/images/about-featured-img.png'
 import ProfileImageAccent from '../profile-image-accent';
 
-export default function AboutSection() {
+export default function AboutSection({ id }) {
     return (
-        <section className="py-[70px]">
+        <section className="py-[70px]" id={ id ? id : null}>
             <div className="container">
                 <div className="lg:flex">
                     <div className="lg:w-[46.66%] mb-[50px] lg:mb-[0]">

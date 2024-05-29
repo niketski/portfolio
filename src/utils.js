@@ -24,3 +24,16 @@ export const isValidPhone = value => {
 
     return telRegex.test(value);
 };
+
+export const scrollToSection = id => {
+    
+    if(!id) { return; }
+
+    const targetSection = document.querySelector(id);
+
+    if(!targetSection) {
+        return;
+    }
+
+    targetSection.scrollIntoView({ behavior: 'smooth' });
+};

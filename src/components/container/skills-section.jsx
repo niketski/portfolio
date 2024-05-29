@@ -3,7 +3,7 @@ import { useState } from 'react';
 import LogoCard from '../logo-card';
 import { techStackData, platformsData, toolsData } from '../../data/skills-data';
 
-export default function SkillsSection() {
+export default function SkillsSection({ id }) {
     const initialTabs = [
         {
             id: 'tech-stack',
@@ -39,7 +39,7 @@ export default function SkillsSection() {
     };
 
     return (
-        <section className="py-[70px]">
+        <section className="py-[70px]" id={id ? id : null}>
             <div className="container">
                 <h2 className="text-center text-[#fff] mb-[28px]">Skills</h2>
                 <div className="flex justify-center mb-[112px]">

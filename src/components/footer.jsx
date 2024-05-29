@@ -1,4 +1,4 @@
-import GetInTouchForm from "./get-in-touch-form";
+import GetInTouchForm from "./container/get-in-touch-form";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhone, faEnvelope, faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
 import { faFacebook, faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
@@ -6,7 +6,7 @@ import { faFacebook, faGithub, faLinkedin } from "@fortawesome/free-brands-svg-i
 export default function Footer() {
 
     return (
-        <footer className="bg-primary">
+        <footer className="bg-primary" id="contact">
           <div className="block lg:flex">
 
               <div className="lg:w-[52.75%]">
