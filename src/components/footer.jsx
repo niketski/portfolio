@@ -13,7 +13,7 @@ export default function Footer() {
 
                 <div className="bg-[#031a39] lg:rounded-tr-[50px] lg:rounded-br-[50px] pt-[70px] lg:pt-[220px] pb-[70px] lg:pb-[160px] px-[15px] md:px-[30px] xl:px-[90px]">
                   <h2 className="text-[#fff] mb-[50px]">Get in <span className="text-primary">Touch</span></h2>
-                  <p className="text-[18px] text-[#fff] mb-[40px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  <p className="text-[18px] text-[#fff] mb-[40px] hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                   <div className="relative">
                     <GetInTouchForm/>
                   </div>

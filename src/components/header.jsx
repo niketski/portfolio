@@ -26,7 +26,7 @@ export default function Header({ mobileMenuHandler, isMobileMenuActive }) {
                 <div className="container">
                     <div className="flex justify-between items-center">
                         <div>
-                            <img src={headerLogo} alt="nicodev logo" className="max-w-[165px]"/>
+                            <img src={headerLogo} alt="nicodev logo" className="max-w-[120px] lg:max-w-[165px]"/>
                         </div>
                         <div className="flex items-center">
                             <nav className=" hidden lg:inline-block">
