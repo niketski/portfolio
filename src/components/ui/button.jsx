@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
-export default function Button({ className, href = null, children, variant, onClick, type = 'button', download}) {    
+export default function Button({ className, href = null, children, variant, onClick, type = 'button', download, target}) {    
 
     let buttonStyleClasses = '';
 
@@ -36,7 +36,7 @@ export default function Button({ className, href = null, children, variant, onCl
             return (
                 <Link 
                     to={href} 
-                    className={`${buttonStyleClasses} btn ${ className ? className : ''}`}>
+                    className={`${buttonStyleClasses} btn ${ className ? className : ''}`} target={target ? target : null}>
                     {children}
                 </Link>
             );
@@ -67,5 +67,6 @@ Button.propTypes = {
     variant: PropTypes.string,
     onClick: PropTypes.func,
     type: PropTypes.string,
-    download: PropTypes.string
+    download: PropTypes.string,
+    target: PropTypes.string
 }

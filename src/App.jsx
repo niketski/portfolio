@@ -9,6 +9,7 @@ import AboutSection from './components/container/about-section';
 import Footer from './components/footer';
 import Header from './components/header';
 import { useEffect, useState } from 'react';
+import { scrollToSection } from './utils';
 
 function App() {
   const [isMobileMenuActive, setIsMobileMenuActive] = useState(false);
@@ -40,7 +41,7 @@ function App() {
             <h1 className="text-[#fff] text-center font-bold accent-font leading-[45px] xl:leading-[70px]">Hey there! I&apos;m <span>Nico</span>, a passionate Web Developer that loves to convert web designs into an interactive and responsive website.</h1>
             <div className="text-center items-center justify-center mt-5 block lg:flex">
               <p className="text-[#fff] mb-5 lg:mb-0">Need a help to make your ideal website turn into reality?</p>
-              <Button className="ml-5" href="/">Lets talk!</Button>
+              <Button className="ml-5" onClick={e => { e.preventDefault(); scrollToSection('#contact') }}>Lets talk!</Button>
             </div>                 
           </Banner>
 

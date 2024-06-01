@@ -1,4 +1,4 @@
-import headerLogo from '../assets/images/logo-header.svg';
+import headerLogo from '../assets/images/logo.png';
 import Button from './ui/button';
 import IconDownload from './ui/icon-download';
 import BurgerMenuButton from './ui/burger-menu-button';
@@ -19,8 +19,6 @@ export default function Header({ mobileMenuHandler, isMobileMenuActive }) {
         scrollToSection(id);
         
     };
-
-    console.log(myCV);
     
     return (
         <>
@@ -28,7 +26,7 @@ export default function Header({ mobileMenuHandler, isMobileMenuActive }) {
                 <div className="container">
                     <div className="flex justify-between items-center">
                         <div>
-                            <img src={headerLogo} alt="Nico Dev Logo" />
+                            <img src={headerLogo} alt="nicodev logo" className="max-w-[165px]"/>
                         </div>
                         <div className="flex items-center">
                             <nav className=" hidden lg:inline-block">

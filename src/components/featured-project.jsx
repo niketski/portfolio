@@ -29,7 +29,7 @@ export default function FeaturedProject({ isEven = false, imageUrl, title, techn
                         <div className="text-[18px] text-[#fff]">
                             <p>{description}</p>
                         </div>
-                        {demoLink && <Button href="/" className="mt-[40px] xl:mt-[80px]">Demo</Button>}
+                        {demoLink && <Button href={demoLink} className="mt-[40px] xl:mt-[80px]" target="_blank">Demo</Button>}
                     </div>
                 </div>
             </div>

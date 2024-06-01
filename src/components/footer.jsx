@@ -73,7 +73,7 @@ export default function Footer() {
                   </div>
 
                   <div>
-                    <p className="text-[16px] text-[#fff]">Copyright © NicoDev 2024.</p>
+                    <p className="text-[16px] text-[#fff]">Copyright © nicodev 2024.</p>
                   </div>
                 </div>
               </div>
